@@ -1,5 +1,4 @@
 import React from 'react'
-import image from "../assets/technology.png"
 
 const Feature = ({image, title, text, index}) => {
   return (

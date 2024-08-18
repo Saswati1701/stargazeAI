@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
 *{
-  font-family: "Rubik", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 body{
   background-color: #080A28;
@@ -212,14 +214,15 @@ a{
 /* navbar */
 
 /* Home */
-.homeContainer {
+/* .homeContainer {
   position: relative;
   width: 100vw;
-  height: 90vh; /* Adjust as needed */
-  background-color: #080A28; /* Fallback color */
+  height: 89vh;
+  background-color: #080A28; 
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .homeContainer::before {
   content: "";
@@ -231,10 +234,18 @@ a{
   background-image: url('./assets/Plexus\ Background.jpeg');
   background-size: cover;
   background-position: center;
-  opacity: 60%; /* Adjust opacity */
+  opacity: 60%; 
   mix-blend-mode: hard-light;
-  z-index: 1;
+  z-index: 1; 
   border-radius: 25px;
+}
+.homeImageContainer{
+  position: absolute;
+  height: 87vh;
+  left: -6rem;
+}
+.homeImage{
+  height: 89vh;
 }
 .homeContent {
   position: relative;
@@ -244,8 +255,19 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid yellow; */
-  width: 85%;
+  border: 1px solid yellow; 
+  width: 90%;
+}
+
+.homeGradient{
+  z-index: -2;
+  position: absolute;
+  opacity: 50%;
+  mix-blend-mode: color-dodge;
+  top: -8rem;
+  left: -5rem;
+  height: 54rem;
+  width: 50rem;
 }
 
 .homeContentText{
@@ -254,10 +276,9 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-left: calc(49%) ;
 }
-.homeContent>div{
-  /* border: 1px solid pink; */
-}
+
 .transform{
   transform: translate(0, 4rem);
 }
@@ -278,7 +299,7 @@ a{
   display: flex;
     justify-content: space-between;
     width: 54%;
-}
+} */
 /* Home */
 
 /* List */
@@ -338,20 +359,45 @@ a{
 
 /* Learn */
 .learnContent{
-  border: 1px solid salmon;
   height: 100%;
-  display: flex;
-  flex-direction: row;
 
 }
+.learnGradient{
+  z-index: -2;
+  position: absolute;
+  opacity: 50%;
+  mix-blend-mode: color-dodge;
+  top: -8rem;
+  left: -5rem;
+  height: 200vh;
+  width: 100vw;
+}
 .learnCard{
-  border: 1px solid white;
+  text-align: left;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+  width: 43%;
 }
 .even{
   background-color: #6534F4;
 }
+.evenStroke{
+  border-left: 6px solid #6534F4;
+  border-radius: 50% 0% 0% 50%;
+}
 .odd{
   background-color: #AD8CF2;
+}
+.oddStroke{
+  border-right: 6px solid #AD8CF2;
+  border-radius: 0% 50% 50% 0%;
+}
+.evenCard{
+  margin-left: calc(54.5%); 
 }
 .countCircle{
   display: flex;
@@ -360,18 +406,26 @@ a{
   color: white;
   width: 4rem;
   height: 4rem;
-  margin: 2rem 0;
+  margin: 0 0 5rem 0;
   border-radius: 50%;
 }
 .countCirclesContainer{
-  border: 1px solid white;
+  position: absolute;
+  z-index: 4;
+  top: calc(11.5%);
+  left: calc(47.6%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 3rem 0;
   align-items: center;
 }
-.learnCard{
-  margin: 0 0 2rem 0;
+.circleWrapper{
+  z-index: 3;
+  background-color: transparent;
+  position: absolute;
+  height: 9rem;
+  width: 9rem;
 }
 
 /* Learn */

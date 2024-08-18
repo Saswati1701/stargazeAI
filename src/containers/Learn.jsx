@@ -1,61 +1,43 @@
 import React from 'react'
-import icon from '../assets/technology.png'
 import Feature from '../components/Feature'
 import { whyLearnAI } from '../constants'
+import gradient from '../assets/gradient.png'
 
-
-const Card = () => {
-  return(
-    <div className='learnCard'>
-      <h3>Dive Into The AI Revolution</h3>
-        <p>
-        AI is not just a buzzword—it’s reshaping the world. By learning AI, kids step into a frontier of technology that is driving the future. They gain early insights into how AI powers everything from smart devices to groundbreaking innovations.
-        </p>
-    </div>
-  )
-}
-
-let count = [];
-for(let i=0; i<7; i++){
-  count.push(i+1);
-}
 
 const Learn = () => {
-  const oddCards = whyLearnAI.filter((item, index)=>(index+1)%2!=0);
-  const evenCards = whyLearnAI.filter((item, index)=>(index+1)%2==0);
-
+  
+  let count = [];
+  for(let i=0; i<7; i++){
+    count.push(i+1);
+  }
   return (
     <div className='learn transform'>
-      <h1>WHY Learn AI</h1>
+      <h1 style={{margin: "1rem 0 5rem 0"}}>Why Learn Artificial Intelligence?</h1>
       <div className='learnContent'>
-        <div>
+        <div className="learnCardsContainer">
           {
-            oddCards.map((item, index)=>(
-              <div key={index} className='learnCard odd'>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
+            whyLearnAI.map((item, index)=>(
+              <div key={index} className={`learnCard ${(index+1)%2 == 0 ? 'even evenCard' : 'odd oddCard'}`}>
+                <img src={item.img} alt='icon' height={200}/>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p style={{fontSize: "14px"}}>{item.text}</p>
+                </div>
               </div>
             ))
           }
         </div>
+        <div>
         <div className='countCirclesContainer'>
         {
           count.map((item, index)=>(
             <div key={index} className={`countCircle ${(index+1)%2 == 0 ? 'even' : 'odd'}`}>
+              <div className={`circleWrapper ${(index+1)%2 == 0 ? 'evenStroke' : 'oddStroke'}`}></div>
               {item}
             </div>
           ))
         }
         </div>
-        <div>
-          {
-            evenCards.map((item, index)=>(
-              <div key={index} className='learnCard even'>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </div>
-            ))
-          }
         </div>
       </div>
     </div>
