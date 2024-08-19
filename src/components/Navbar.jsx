@@ -9,6 +9,7 @@ import {
     Route,
     NavLink
   } from "react-router-dom";
+import logo from '../assets/logoimage.png'
 // import { IoClose, IoMenu } from "react-icons/io5";
 
 const Navbar = () => {
@@ -61,6 +62,7 @@ const Navbar = () => {
                 marginLeft: "4rem",
                 borderRadius: "50%",
             }}></div>
+            <img className='logo' src={logo} alt="logo" />
           </NavLink>
   
           {isMobile && (

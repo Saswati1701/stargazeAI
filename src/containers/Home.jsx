@@ -2,8 +2,17 @@ import React from 'react'
 import homeImage from "../assets/homeRobot.png"
 import List from '../components/List'
 import Button from '../components/Button'
-import gradient from '../assets/gradient.png'
+import homeGradient from '../assets/homeGradient.png'
+import google from "../assets/google.png"
+import amazon from "../assets/amazon.png"
+import ycombinator from "../assets/ycombinator.png"
+import rebright from "../assets/rebright.png"
+import stem from "../assets/stem-bg-white.png"
+import FAQ from './FAQ'
+import Roadmap from './Roadmap'
+
 const Home = () => {
+  const companies = [google, amazon, ycombinator, rebright, stem]
   return (
     <div className='homeContainer transform'>
       {/* <div className='homeContent'>
@@ -26,10 +35,35 @@ const Home = () => {
         </div>
         
       </div> */}
+      <div className='homeContentContainer'>
+        <div className='textContent'>
+          <h1>Teach Your Kids to Dominate AI</h1>
+          <h3>Introducing a Premium Artificial Intelligence Specialization <br /> For Young Kids</h3>
+          <div className='homeListContainer'>
+              <List text="Based on Stanford University's Machine Learning Specialization Curriculum"/>
+              <List text="LIVE Classes with Personalized attention"/>
+              <List text="Pay Just Rs. 1500/mo And Get Full Access To Our Advanced Learning Program"/>
+            </div>
+            <div className='homeButtons'>
+              <Button background="gradient" text="Enroll Now"/>
+              <Button background="solid" text="Try a Free Class"/>
+            </div>
+          </div>
+      </div>
 
       <div className='homeImageContainer'>
+        <img className='homeGradient' src={homeGradient} alt="" />
         <img className="homeImage" src={homeImage} alt=""/>
       </div>
+      <div className='companiesContainer'>
+        <h4 style={{color: "black"}}>Built by Alumnis from</h4>
+        {companies.map((item, index)=>(
+          <div key={index} className='companyContainer'>
+            <img src={item} alt="" />
+          </div>
+        ))}
+      </div>
+      
     </div>
   )
 }

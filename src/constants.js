@@ -4,6 +4,7 @@ import Jobs from "./containers/Jobs";
 import Roadmap from "./containers/Roadmap";
 import News from "./containers/News";
 import Features from "./containers/Features";
+import Projects from "./containers/Projects";
 
 import icon from "./assets/AI and Cryptocurrency_ Enhancing Each Other for Mutual Progress.jpeg"
 
@@ -14,6 +15,7 @@ import learn4 from "./assets/learn4.png"
 import learn5 from "./assets/learn5.png"
 import learn6 from "./assets/learn6.png"
 import learn7 from "./assets/learn7.png"
+
 
 export const navigation = [
     {
@@ -31,8 +33,8 @@ export const navigation = [
     {
       component: <Roadmap/>,
       id: "2",
-      title: "Roadmap",
-      url: "roadmap",
+      title: "Curriculum",
+      url: "curriculum",
     },
     {
       component: <Learn/>,
@@ -47,11 +49,17 @@ export const navigation = [
       url: "news",
     },
     {
-        component: <Jobs/>,
-        id: "6",
-        title: "Connect",
-        url: "jobs",
-      },
+      component: <Jobs/>,
+      id: "6",
+      title: "Connect",
+      url: "jobs",
+    },
+    {
+      component: <Projects/>,
+      id: "7",
+      title: "Projects",
+      url: "projects",
+    },
   ];
 export const featuresList = [
     {
