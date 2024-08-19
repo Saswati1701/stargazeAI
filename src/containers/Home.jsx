@@ -14,7 +14,7 @@ import Roadmap from './Roadmap'
 const Home = () => {
   const companies = [google, amazon, ycombinator, rebright, stem]
   return (
-    <div className='homeContainer transform'>
+    <div className='homeContainer' id='home'>
       {/* <div className='homeContent'>
         <img className="homeGradient" src={gradient} alt="gradient" />
         <div className='homeImageContainer'>
@@ -54,14 +54,6 @@ const Home = () => {
       <div className='homeImageContainer'>
         <img className='homeGradient' src={homeGradient} alt="" />
         <img className="homeImage" src={homeImage} alt=""/>
-      </div>
-      <div className='companiesContainer'>
-        <h4 style={{color: "black"}}>Built by Alumnis from</h4>
-        {companies.map((item, index)=>(
-          <div key={index} className='companyContainer'>
-            <img src={item} alt="" />
-          </div>
-        ))}
       </div>
       
     </div>
