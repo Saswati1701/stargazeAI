@@ -3,12 +3,7 @@ import React, { useState } from 'react'
 import { navigation } from '../constants';
 import { useLocation } from 'react-router'
 import { useMediaQuery } from "react-responsive";
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    NavLink
-  } from "react-router-dom";
+import { Link } from 'react-scroll';
 import logo from '../assets/logoimage.png'
 // import { IoClose, IoMenu } from "react-icons/io5";
 
@@ -38,13 +33,13 @@ const Navbar = () => {
         <ul className={listClassName}>
           {navigation.map((item, index)=>(
               <li key={item.id} className='nav__item'>
-                  <NavLink 
+                  <Link 
                       className={`nav__link ${window.location.pathname === `/${item.url}`? "active":"inactive"} ${index == navigation.length-1? "yellow-button" : "notButtons"}`} 
                       onClick={()=>{handleClick(item.url)}}
-                      to={`/${item.url}`}
+                      to={item.url}
                   >
                       {item.title}
-                  </NavLink>
+                  </Link>
               </li>
           ))}
         </ul>
@@ -54,7 +49,7 @@ const Navbar = () => {
     return (
       <header className="header">
         <nav className="nav container">
-          <NavLink to="/" className="nav__logo">
+          <Link to="/" className="nav__logo">
             <div style={{
                 height: "3rem",
                 width: "3rem",
@@ -63,7 +58,7 @@ const Navbar = () => {
                 borderRadius: "50%",
             }}></div>
             <img className='logo' src={logo} alt="logo" />
-          </NavLink>
+          </Link>
   
           {isMobile && (
             <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>

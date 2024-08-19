@@ -11,7 +11,7 @@ const Learn = () => {
     count.push(i+1);
   }
   return (
-    <div className='learn transform'>
+    <div className='learn transform' id='learn'>
       <h1 style={{margin: "1rem 0 5rem 0", color: "black"}}>Why Learn Artificial Intelligence?</h1>
       <div className='learnContent'>
         <div className="learnCardsContainer">

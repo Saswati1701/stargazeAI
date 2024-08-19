@@ -9,21 +9,20 @@ import {
 } from "react-router-dom";
 import { navigation } from './constants';
 import Navbar from './components/Navbar';
+import Features from './containers/Features';
+import Roadmap from './containers/Roadmap';
+import Learn from './containers/Learn';
 
 
 function App() {
   return (
-    <Router>
       <div className="App">
         <Navbar/>
-        <Routes>
-          <Route path='/' element={<LandingPage/>}/>
-            {navigation.map((item)=>(
-                  <Route key={item.id} path={`/${item.url}`} element={item.component}/>
-              ))}
-        </Routes>
+        {navigation.map((item)=>(
+          item.component
+        ))}
+          
       </div>
-    </Router>
   );
 }
 

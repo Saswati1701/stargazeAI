@@ -4,7 +4,7 @@ import Feature from '../components/Feature'
 
 const Features = () => {
   return (
-    <div className='features transform'>
+    <div className='features' id='features'>
       <div className='featuresContent'>
         <div className='features-centre-icon-container'>
         </div>

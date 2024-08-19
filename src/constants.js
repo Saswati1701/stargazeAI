@@ -1,12 +1,14 @@
 import Learn from "./containers/Learn";
 import Home from "./containers/Home";
-import Jobs from "./containers/Jobs";
+import Instructors from "./containers/Instructors";
 import Roadmap from "./containers/Roadmap";
-import News from "./containers/News";
+import Pricing from "./containers/Pricing";
 import Features from "./containers/Features";
 import Projects from "./containers/Projects";
+import FAQ from "./containers/FAQ";
 
 import icon from "./assets/AI and Cryptocurrency_ Enhancing Each Other for Mutual Progress.jpeg"
+import project from "./assets/homeRobot.png"
 
 import learn1 from "./assets/learn1.png"
 import learn2 from "./assets/learn2.png"
@@ -25,6 +27,12 @@ export const navigation = [
       url: "home",
     },
     {
+        component: <Instructors/>,
+        id: "6",
+        title: "Instructors",
+        url: "instructors",
+      },
+    {
       component: <Features/>,
       id: "1",
       title: "Features",
@@ -37,29 +45,30 @@ export const navigation = [
       url: "curriculum",
     },
     {
+        component: <Pricing/>,
+        id: "5",
+        title: "Pricing",
+        url: "pricing",
+    },
+    {
       component: <Learn/>,
       id: "4",
       title: "Why Learn AI",
       url: "learn",
     },
-    {
-      component: <News/>,
-      id: "5",
-      title: "Newsroom",
-      url: "news",
-    },
-    {
-      component: <Jobs/>,
-      id: "6",
-      title: "Connect",
-      url: "jobs",
-    },
+    
     {
       component: <Projects/>,
       id: "7",
       title: "Projects",
       url: "projects",
     },
+    {
+        component: <FAQ/>,
+        id: "8",
+        title: "FAQ",
+        url: "faq",
+      },
   ];
 export const featuresList = [
     {
@@ -140,4 +149,42 @@ export const whyLearnAI = [
         title: "Ignite Creativity Across Diverse Fields",
         text: "AI brings together technology, mathematics, design, engineering, and psychology, creating a rich tapestry of interdisciplinary learning. By studying AI, kids explore its impact on art, where it aids in creative projects"
     },
+]
+export const faq = [
+    {
+        question: "Is prior experience in AI or coding necessary for this course?",
+        text: "None at all. We start from the fundamentals and progress to advanced graduate-level techniques, all explained in an easy-to-understand manner. With Stargaze AI, even complete beginners can follow along effortlessly and excel in the field."
+    },
+    {
+        question: "What courses does Stargaze AI offer?",
+        text: "Currently we offer Artificial Intelligence Specialization course for students in grades 5, 6 and 7. However we are planning to launch new AI courses to incorporate students of other age groups as well in future."
+    },
+    {
+        question: "What is the duration of the course?",
+        text: "The course approximately spans for 2 years empowering  students to attain advanced level ML and deep learning techniques. However, you can always choose to opt out if you wish to discontinue, with a 100% money-back guarantee for any remaining classes."
+    },
+    {
+        question: "What kind of device does my child require for the course?",
+        text: "A laptop with decent computing power is required to train complex ML and neural models."
+    },
+    { 
+        question: "How can I trust Stargaze AI?",
+        text: "Stargaze AI strive to provide affordable AI specialization to young students through experienced instructors from IITs and top tech companies like Microsoft. Moreover we don’t ask for large upfront payments  as we are confident that you will choose us for educating your kids EVERY MONTH. If, at any point, you feel we’re not meeting your expectations, you can cancel at any time and receive a refund for any unused lessons or classes—no questions asked. Simply email us at *, and we’ll promptly process your refund. It’s as simple as that. You can also share your complaints or feedback at **. We take them very seriously and are committed to making improvements based on your suggestions."
+    },
+    {
+        question: "What can I do if my child misses a class?",
+        text: "Don’t worry; you’ll receive a recording of the missed class. Additionally, 24/7 unlimited doubt clearance is available to ensure all questions are answered. If there is a future class covering similar topics, your child is welcome to attend for a better understanding."
+    },
+    {
+        question: "How will I stay updated on my child’s progress?",
+        text: "Every month, we conduct parent-teacher meetings (PTMs) to discuss students' progress and provide personalized progress reports. Additionally, parents are welcome to attend any class to observe their child’s progress in real-time or watch the class recordings. We will also share links to projects, hands-on activities, and quizzes completed by the students with the parents."
+    },
+    {
+        question: "My kid already learns computer science in school so why should I enroll in Stargaze AI",
+        text: "The concepts taught in a computer science class at school is predominantly theoretical and even the practical knowledge offered in school doesn’t even come close to the advanced AI techniques taught at Stargaze AI. You can compare the school curriculuma and Stargaze AI curriculumm and yourdelf see the difference."
+    },
+    {
+        question: "My child already learns computer science in school. Why should I enroll in Stargaze AI?",
+        text: "The computer science concepts taught in school are predominantly theoretical, and the practical knowledge provided there does not align with the skills demanded by the industry. Stargaze AI bridges this gap by offering advanced AI techniques that match industry-level skills. We follow the Stanford University ML specialization curriculum, a graduate-level program, and supplement it with extensive additional content on deep learning, Python libraries, and hands-on projects. Our curriculum is delivered in an easy-to-understand manner, focusing on creative and innovative learning rather than rote memorization. You can compare the school curriculum with the Stargaze AI curriculum and see the difference for yourself."
+    }
 ]
