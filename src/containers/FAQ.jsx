@@ -30,7 +30,12 @@ const FAQ = () => {
     <div id='faq' className='faqContainer'>
       <img className='faqImage' src={faqImage} alt="" height={524} width={629}/>
       <div className="faq">
-        <h1>FAQ</h1>
+        <h1
+          style={{
+            borderBottom: "5px solid orange",
+            width:" fit-content",
+          }}
+        >FAQ</h1>
         {
           faq.map((item, index)=>(
             <FAQItem key={index} question={item.question} answer={item.text}/>

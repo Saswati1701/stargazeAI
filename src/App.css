@@ -43,7 +43,7 @@ a{
 }
 .homeVideo{
   margin: 5px 6px;
-  width: 99vw;
+  width: 100vw;
   height: 99vh;
   object-fit: cover;
   position: fixed;
@@ -63,7 +63,7 @@ a{
   text-align: center;
   color: white;
   background-color: #090015;
-  ;
+  
 }
 
 .header {
@@ -77,9 +77,9 @@ a{
 
  .logo{
   position: absolute;
-  top: -1.4rem;
-  left: 2rem;
-  height: 7rem;
+    top: 0.5rem;
+    left: 1.89rem;
+    height: 5rem;
  }
 
 .nav {
@@ -87,8 +87,8 @@ a{
   align-items: center;
   justify-content: space-between;
   position: relative;
-  margin: 1rem 4rem;
-  height: 3.5rem;
+  margin: 0rem 4rem;
+  height: 5.5rem;
   
  }
 
@@ -100,6 +100,9 @@ a{
 
  .nav__list__web{
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
  }
 
 .nav__item{
@@ -204,7 +207,7 @@ a{
 }
 @media screen and (min-width: 1150px) {
   .nav {
-    height: calc(var(--header-height) + 1rem);
+    /* height: calc(var(--header-height) + 1rem); */
   }
   .nav__toggle,
   .nav__close {
@@ -307,11 +310,11 @@ a{
 .homeContainer{
   background-color: #090015;
   height: 100vh;
-  width: 100vw;
+  width: 90vw;
 }
 .homeContentContainer{
   height: 100vh;
-  width: 99vw;
+  width: 93vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -331,7 +334,7 @@ a{
 }
 .homeGradient{
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   height: 83vh;
   width: 90.5vh;
   opacity: 31%;
@@ -441,7 +444,7 @@ a{
   top: -8rem;
   left: -5rem;
   height: 200vh;
-  width: 100vw;
+  width: 90vw;
 }
 .learnCard{
   text-align: left;
@@ -509,15 +512,28 @@ a{
 
 /* Roadmap */
 .roadmap{
-  width: 100vw;
+  width: 90vw;
   background-color: #090015;
 }
 /* Roadmap */
 
 /* Instructors */
+.instructors{
+  margin-top: 2rem;
+  color: black;
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .instructorsContainer{
+  width: 70%;
   display: flex;
   justify-content: space-around;
+  padding: 0rem 0 5rem 0;
 }
 
 .instructorsLogoContainer{
@@ -531,8 +547,8 @@ a{
 
 /* FAQ */
 .faqContainer{
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 98.5vw;
   background-color: white;
   color: black;
   display: flex;
@@ -540,12 +556,17 @@ a{
   align-items: center;
   border: 1px solid blue;
   margin: 10rem 0 0 0;
+  text-align: left;
+}
+
+.faq{
+  width: 42%;
 }
 
 .faq-item {
   margin-bottom: 10px;
-  border: 1px solid black;
-  padding: 0 0 0 1rem;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -574,3 +595,189 @@ a{
 }
 
 /* FAQ */
+
+/* Button */
+button, input:where([type=button]), input:where([type=reset]), input:where([type=submit]) {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+.button {
+  font-size: .75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.button:hover {
+  color: var(--hover-text-color,#AC6AFF); /* Replace with actual hover color */
+}
+
+.button.white {
+  color: #0E0C15; /* Replace with the actual color */
+}
+
+.button.default {
+  color: #FFFFFF; /* Replace with the actual color */
+}
+
+.spanClasses {
+  position: relative;
+  z-index: 10;
+}
+.z-1 {
+  z-index: 1;
+}
+.z-2 {
+  z-index: 2;
+}
+.z-10 {
+  z-index: 10;
+}
+/* Button */
+
+/* Buttonsvg */
+.block{
+  display: block;
+}
+.absolute{
+  position: absolute;
+}
+.top-0{
+  top:0;
+}
+.left-0{
+  left: 0;
+}
+
+.relative{
+  position: relative;
+}
+.text-n-1 {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.inline-flex{
+  display: inline-flex;
+}
+.items-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+.h-11{
+  height: 2.75rem;
+}
+.right-0 {
+  right: 0;
+}
+.transition-colors{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: linear;
+  transition-duration: .2s;
+}
+.hover-text-color-1:hover{
+  color: #AC6AFF;
+}
+
+.w-\[calc\(100\%-2\.625rem\)\] {
+  width: calc(100% - 2.625rem);
+}
+
+.left-\[1\.3125rem\] {
+  left: 1.3125rem;
+}
+
+svg{
+  display: block;
+  vertical-align: middle;
+}
+
+/* Buttonsvg */
+
+/* Pricing */
+.pricing{
+  height: 100vh;
+}
+.mb-\[6\.5rem\] {
+    margin-bottom: 6.5rem;
+  }
+  .-translate-y-1\/2 {
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.w-\[60rem\] {
+  width: 60rem;
+}
+.top-1\/2 {
+  top: 50%;
+}
+.left-1\/2 {
+  left: 50%;
+}
+.w-full {
+  width: 100%;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.tagline {
+  font-family: var(--font-grotesk);
+  font-size: .75rem;
+  line-height: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+}
+.text-n-3 {
+  --tw-text-opacity: 1;
+  color: rgb(173 168 195 / var(--tw-text-opacity));
+}
+.mx-3 {
+  margin-left: .75rem;
+  margin-right: .75rem;
+}
+.max-w-\[50rem\] {
+  max-width: 50rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+@media (min-width: 1024px) {
+  .lg\:mb-20 {
+      margin-bottom: 5rem;
+  }
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.flex {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .md\:justify-center {
+      justify-content: center;
+  }
+}
+@media (min-width: 1280px) {
+  .h2 {
+      font-size: 3rem;
+      line-height: 1.25;
+  }
+}
+.pricing p{
+  font-size: 1.4rem;
+  margin: 0;
+}
+/* Pricing */

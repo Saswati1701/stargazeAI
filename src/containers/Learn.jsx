@@ -1,15 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Feature from '../components/Feature'
 import { whyLearnAI } from '../constants'
 import gradient from '../assets/gradient.png'
 
 
 const Learn = () => {
-  
   let count = [];
-  for(let i=0; i<7; i++){
-    count.push(i+1);
-  }
+  useEffect(()=>{
+    for(let i=0; i<7; i++){
+      count.push(i+1);
+    }
+
+  },[])
   return (
     <div className='learn transform' id='learn'>
       <h1 style={{margin: "1rem 0 5rem 0", color: "black"}}>Why Learn Artificial Intelligence?</h1>

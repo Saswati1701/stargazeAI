@@ -1,12 +1,3 @@
-import Learn from "./containers/Learn";
-import Home from "./containers/Home";
-import Instructors from "./containers/Instructors";
-import Roadmap from "./containers/Roadmap";
-import Pricing from "./containers/Pricing";
-import Features from "./containers/Features";
-import Projects from "./containers/Projects";
-import FAQ from "./containers/FAQ";
-
 import icon from "./assets/AI and Cryptocurrency_ Enhancing Each Other for Mutual Progress.jpeg"
 import project from "./assets/homeRobot.png"
 
@@ -19,57 +10,7 @@ import learn6 from "./assets/learn6.png"
 import learn7 from "./assets/learn7.png"
 
 
-export const navigation = [
-    {
-      component: <Home/>,
-      id: "0",
-      title: "Home",
-      url: "home",
-    },
-    {
-        component: <Instructors/>,
-        id: "6",
-        title: "Instructors",
-        url: "instructors",
-      },
-    {
-      component: <Features/>,
-      id: "1",
-      title: "Features",
-      url: "features",
-    },
-    {
-      component: <Roadmap/>,
-      id: "2",
-      title: "Curriculum",
-      url: "curriculum",
-    },
-    {
-        component: <Pricing/>,
-        id: "5",
-        title: "Pricing",
-        url: "pricing",
-    },
-    {
-      component: <Learn/>,
-      id: "4",
-      title: "Why Learn AI",
-      url: "learn",
-    },
-    
-    {
-      component: <Projects/>,
-      id: "7",
-      title: "Projects",
-      url: "projects",
-    },
-    {
-        component: <FAQ/>,
-        id: "8",
-        title: "FAQ",
-        url: "faq",
-      },
-  ];
+
 export const featuresList = [
     {
         image: icon,
@@ -163,10 +104,7 @@ export const faq = [
         question: "What is the duration of the course?",
         text: "The course approximately spans for 2 years empowering  students to attain advanced level ML and deep learning techniques. However, you can always choose to opt out if you wish to discontinue, with a 100% money-back guarantee for any remaining classes."
     },
-    {
-        question: "What kind of device does my child require for the course?",
-        text: "A laptop with decent computing power is required to train complex ML and neural models."
-    },
+   
     { 
         question: "How can I trust Stargaze AI?",
         text: "Stargaze AI strive to provide affordable AI specialization to young students through experienced instructors from IITs and top tech companies like Microsoft. Moreover we don’t ask for large upfront payments  as we are confident that you will choose us for educating your kids EVERY MONTH. If, at any point, you feel we’re not meeting your expectations, you can cancel at any time and receive a refund for any unused lessons or classes—no questions asked. Simply email us at *, and we’ll promptly process your refund. It’s as simple as that. You can also share your complaints or feedback at **. We take them very seriously and are committed to making improvements based on your suggestions."
@@ -180,8 +118,8 @@ export const faq = [
         text: "Every month, we conduct parent-teacher meetings (PTMs) to discuss students' progress and provide personalized progress reports. Additionally, parents are welcome to attend any class to observe their child’s progress in real-time or watch the class recordings. We will also share links to projects, hands-on activities, and quizzes completed by the students with the parents."
     },
     {
-        question: "My kid already learns computer science in school so why should I enroll in Stargaze AI",
-        text: "The concepts taught in a computer science class at school is predominantly theoretical and even the practical knowledge offered in school doesn’t even come close to the advanced AI techniques taught at Stargaze AI. You can compare the school curriculuma and Stargaze AI curriculumm and yourdelf see the difference."
+        question: "What kind of device does my child require for the course?",
+        text: "A laptop with decent computing power is required to train complex ML and neural models."
     },
     {
         question: "My child already learns computer science in school. Why should I enroll in Stargaze AI?",

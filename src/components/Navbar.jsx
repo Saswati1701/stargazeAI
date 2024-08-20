@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 // import { navigation } from '../constants'
-import { navigation } from '../constants';
+import { navigation } from '../routes';
 import { useLocation } from 'react-router'
 import { useMediaQuery } from "react-responsive";
 import { Link } from 'react-scroll';
 import logo from '../assets/logoimage.png'
 // import { IoClose, IoMenu } from "react-icons/io5";
+import Button from './Button';
 
 const Navbar = () => {
     const [active, setActive] = useState();
@@ -34,7 +35,7 @@ const Navbar = () => {
           {navigation.map((item, index)=>(
               <li key={item.id} className='nav__item'>
                   <Link 
-                      className={`nav__link ${window.location.pathname === `/${item.url}`? "active":"inactive"} ${index == navigation.length-1? "yellow-button" : "notButtons"}`} 
+                      className={`nav__link ${window.location.pathname === `/${item.url}`? "active":"inactive"}`} 
                       onClick={()=>{handleClick(item.url)}}
                       to={item.url}
                   >
@@ -42,6 +43,9 @@ const Navbar = () => {
                   </Link>
               </li>
           ))}
+            <Link>
+              <Button text="Contact us"></Button>
+            </Link>
         </ul>
       );
     };
@@ -50,14 +54,8 @@ const Navbar = () => {
       <header className="header">
         <nav className="nav container">
           <Link to="/" className="nav__logo">
-            <div style={{
-                height: "3rem",
-                width: "3rem",
-                backgroundImage: "linear-gradient(#6534F4, #AD8CF2)",
-                marginLeft: "4rem",
-                borderRadius: "50%",
-            }}></div>
             <img className='logo' src={logo} alt="logo" />
+            <p style={{margin: "0 0 0 6rem"}}>Stargaze AI</p>
           </Link>
   
           {isMobile && (

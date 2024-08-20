@@ -18,10 +18,10 @@ const Card = ({text, img1, img2, height1="50px", height2="50px", marginRight="0p
 
 const Instructors = () => {
   return (
-    <div id='instructors'>
-      <h1>Bringing Together Industry Expertise And Academic Excellence</h1>
+    <div id='instructors' className='instructors'>
+      <h1 style={{margin: "16rem 0 3rem 0"}}>Bringing Together Industry Expertise And Academic Excellence</h1>
       <div className='instructorsContainer'>
-        <Card text="Built by alumnis from" img1={iitbhu} img2={microsoft} marginRight='2rem'/>
+        <Card text="Built by alumnis from" img1={iitbhu} img2={microsoft} height1='70px' marginRight='2rem'/>
         <Card text="Our Curriculum is inspired from" img1={stanford} img2={deep} height1="120px"/>
       </div>
     </div>

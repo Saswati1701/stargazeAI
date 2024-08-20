@@ -10,10 +10,12 @@ import rebright from "../assets/rebright.png"
 import stem from "../assets/stem-bg-white.png"
 import FAQ from './FAQ'
 import Roadmap from './Roadmap'
+import Instructors from './Instructors'
 
 const Home = () => {
   const companies = [google, amazon, ycombinator, rebright, stem]
   return (
+    <>
     <div className='homeContainer' id='home'>
       {/* <div className='homeContent'>
         <img className="homeGradient" src={gradient} alt="gradient" />
@@ -45,7 +47,7 @@ const Home = () => {
               <List text="Pay Just Rs. 1500/mo And Get Full Access To Our Advanced Learning Program"/>
             </div>
             <div className='homeButtons'>
-              <Button background="gradient" text="Enroll Now"/>
+              <Button text="Enroll now"></Button>
               <Button background="solid" text="Try a Free Class"/>
             </div>
           </div>
@@ -57,6 +59,8 @@ const Home = () => {
       </div>
       
     </div>
+    <Instructors/>
+    </>
   )
 }
 
